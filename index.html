@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat app</title>
+</head>
+<body>
+    <!-- container -->
+    <div class="container my-4 ">
+        <!-- title -->
+        <h1 class="my-4 text-center">Chat Room</h1>
+        <!-- chatroom options -->
+        <div class="chat-rooms text-center">
+            <div class="my-4">Choose Your chatroom</div>
+            <button class="btn btn-secondary" name="random" >#Random</button>
+            <button class="btn btn-secondary" name="gaming" >#Gaming</button>
+            <button class="btn btn-secondary" name="coding" >#Coding</button>
+            <button class="btn btn-secondary" name="music" >#Music</button>
+        </div>
+
+        <!-- all chats -->
+        <div class="chats">
+            <ul class="list-group"></ul>
+        </div>
+
+        <form class="message input-group my-4">
+            <div class="input-group-prepend">
+                <div class="input-group-text">Your message:</div>
+            </div>
+            <input type="text" name="message" class="form-control">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary ">send</button>
+            </div>         
+        </form>
+        <form class="user input-group my-4">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary">Username</button>
+            </div>
+            <input type="text" name="username" class="form-control">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary ">send</button>
+            </div>         
+        </form>
+
+
+
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+
+    <!-- firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAZcRG7ZXTuUouUx1iz-9iKjIR4bdm8BKw",
+        authDomain: "chat-chan.firebaseapp.com",
+        databaseURL: "https://chat-chan.firebaseio.com",
+        projectId: "chat-chan",
+        storageBucket: "chat-chan.appspot.com",
+        messagingSenderId: "542758832274",
+        appId: "1:542758832274:web:c967bab274496a8146fe4b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore()
+    </script>
+
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/gui.js"></script>
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>
