@@ -24,7 +24,7 @@ class Chatroom {
     }
     //getting live chats from firestore collection
     getChat(callback){
-        this.unsub = this.chats.onSnapshot(snapshot => {
+        this.unsub = this.chats.where('room', '==', this.room).onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
                 if(change.type==='added' & change.doc.data().room===this.room){
                     callback(change.doc.data())
@@ -36,6 +36,7 @@ class Chatroom {
     //update Username
     updateUsername(username){
         this.username = username
+        localStorage.setItem('username', username)
     }
     //update current chatroom
     updateRoom(room){

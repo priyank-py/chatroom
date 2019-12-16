@@ -14,12 +14,12 @@
         <!-- title -->
         <h1 class="my-4 text-center">Chat Room</h1>
         <!-- chatroom options -->
-        <div class="chat-rooms text-center">
+        <div class="chat-rooms text-center btn-group btn-group-toggle d-block rounded">
             <div class="my-4">Choose Your chatroom</div>
-            <button class="btn btn-secondary" name="random" >#Random</button>
-            <button class="btn btn-secondary" name="gaming" >#Gaming</button>
-            <button class="btn btn-secondary" name="coding" >#Coding</button>
-            <button class="btn btn-secondary" name="music" >#Music</button>
+            <button class="btn btn-outline-primary" name="random" >#Random</button>
+            <button class="btn btn-outline-primary" name="gaming" >#Gaming</button>
+            <button class="btn btn-outline-primary" name="coding" >#Coding</button>
+            <button class="btn btn-outline-primary" name="music" >#Music</button>
         </div>
 
         <!-- all chats -->
@@ -42,7 +42,7 @@
             </div>
             <input type="text" name="username" class="form-control">
             <div class="input-group-append">
-                <button type="submit" class="btn btn-secondary ">send</button>
+                <button type="submit" class="btn btn-secondary ">save</button>
             </div>         
         </form>
 
@@ -74,7 +74,7 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore()
     </script>
-
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
     <script src="scripts/chat.js"></script>
     <script src="scripts/gui.js"></script>
     <script src="scripts/app.js"></script>
